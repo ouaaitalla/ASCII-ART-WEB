@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ascii-art-web</title>
 </head>
 
 <body>
-    <form action="/ascii-art" method="POST">
+    <form action="/ascii-art" method="post">
                     <label for="text">Enter text:</label>
-                    <textarea name="text" > </textarea>
-
+                    <div>
+                    <textarea name="text" maxlength="1024" required></textarea>
+                    </div>
                     <label>Choose banner:</label>
-                        <label class="radio-option">
-                            <input type="radio" name="banner" value="standard"> standard</input>                  
-                        <label class="radio-option">
-                            <label class="radio-option">
+                        <label>
+                            <input type="radio" name="banner" value="standard"> standard</input>                                
+                        <label>
+                            <label>
                             <input type="radio" name="banner" value="shadow"> shadow </input>
                         </label>
-                            <label class="radio-option">
+                            <label>
                             <input type="radio" name="banner" value="thinkertoy"> thinkertoy </input>
                             </label>
-                        <button type="submit" name = "submit">submit</button>
-                     
+                        <button type="submit" name = "submit">generate</button>
     </form>
-    {{if .Result}}
-    <pre> {{ .Result }} </pre>
-    {{end}}
 </body>
 </html>

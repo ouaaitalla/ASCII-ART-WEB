@@ -1,8 +1,8 @@
-package main
+package handel
 
 
 // isValidASCII checks whether the string contains only printable ASCII characters or newlines.
-func isValidASCII(s string) bool {
+func IsValidASCII(s string) bool {
 	for _, r := range s {
 		if r == '\n' {
 			continue
